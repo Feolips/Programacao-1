@@ -1,4 +1,5 @@
 input = require("prompt-sync")();
+console.clear(); // Método para limpar a tela
 
 //MENU GERAL
 // opcao = 0
