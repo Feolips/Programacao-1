@@ -1,6 +1,50 @@
-input = require("prompt-sync")();
+// AskBank: Sistema de Gestão de Banco de Questões
 
-//-------------------------------------------------------------------------------------------------------
+// Este software é capaz de gerar e corrigir provas de Verdadeiro/Falso
+// de 10 questões por disciplina com base em um array de banco de questões.
+input = require("prompt-sync")();
+console.clear();
+var Questões = [];  // As questões serão armazenadas aqui
+var Prova = [];     // A prova gerada será armazenada aqui
+
+// --------FUNÇÕES DO MÓDULO PROFESSOR-------- //
+ // Cadastro de nova questão no array/BD
+ function cadastraQuestão(disciplina){
+     questão = {disciplina}
+ }
+ // Lista todas as questões da disciplina escolhida
+ function listaQuestão(disciplina){
+     for (var i = 0; i < Questões.length; i++){
+         console.log(Questões.disciplina[i])
+        }
+ }
+ // Função para editar uma questão da disciplina escolhida
+ function editaQuestão(){
+     return questão
+    }
+    
+ // Função para escolher quais questões devem entrar em cada prova gerada
+ function escolheQuestão(){
+    return ;
+    }
+       
+ // Função de montagem de Prova com 10 questões da disciplina escolhida
+ function geraProva(disciplina, montagem){
+    while (montagem == "s"){
+        for (var i = 0; i < 10; i++){
+        return prova = escolheQuestão
+        }
+    }
+ 
+// --------FUNÇÕES DO MÓDULO ALUNO-------- //
+
+ function respondeProva(disciplina){
+
+ }
+
+
+/* A partir daqui é conteúdo antigo
+
 // CADASTRO DE QUESTÕES
 listaQuestoes = [
     {disciplina: "Matematica", professor: "Simeao", serie: "3", assunto: "Geometria Espacial", dificuldade: "1", enunciado: "Qual é o volume de um cubo de aresta 2?", alternativa: [1,8,12,5,7,14,22,50,21,100], resposta: ["F","V","F","F","F","F","F","F","F","F"]},

@@ -2,10 +2,15 @@
 <html lang="pt_BR">
 <head>
 	<title>AskBank Sistemas</title>
-	<meta charset="UTF-8">
+	<meta charset="UTF-8"/>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style>
+		h1 {
+			font-family: Arial;
+			font-size: 30pt;
+			text-shadow: 1px 1px 2px grey;
+		}
 		body{
 			font: normal 18pt Arial;
 			background-color: rgb(42, 2, 80);
@@ -13,30 +18,36 @@
 
 		}
 		input{
-			font: normal 18pt Arial;
-			width: 100px;
+			font: normal 12pt Arial;
+			/*width: 90px;*/
 		}
 	</style>
 </head>
 
 <body>
 	<h1>AskBank Correções Inteligentes</h1>
-	<u1>
-		<li>- Escolha uma opção no Menu</li>
-	</u1>
+	
+	<div#entraMenu id="menu" onclick="entraMenu()">
+		
+	</div>
+	<input type="time">
+	<input type="">
+	<input type="file" name="Carregar questão" onclick="enviar()">
+	<input type="button" value="Enviar" onclick="enviar()">
 	<script>
+		function entraMenu(menu){
+			return n * 2;
+		}
+		
 		//type="module" src="./ProjetoP1_Rascunho.js";
-	let botao = window.confirm('Deseja adicionar uma questão?')
-	if (botao == true){
-		disciplina = window.prompt('Escolha a disciplina')
-		window.alert('Disciplina ' + disciplina + ' adicionada.')
-		//console.log(disciplina)
-	} else {window.alert('Cancelado')}
-	function media(numero){
-		return n * 2;
-	}
-	numero = Number.parseInt(2) + Number.parseFloat(5.5)
-	window.alert('${numero}')
+		// let botao = window.confirm('Deseja adicionar uma questão?')
+		// if (botao == true){
+		// disciplina = window.prompt('Escolha a disciplina')
+		// window.alert('Disciplina ' + disciplina + ' adicionada.')
+		// //console.log(disciplina)
+		// } else {window.alert('Cancelado')}
+		// numero = Number.parseInt(2) + Number.parseFloat(5.5)
+		// window.alert(`${numero}`)
 	</script>
 </body>
 </html>
