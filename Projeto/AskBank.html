@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt_BR">
 <head>
-	<title>JavaScript Modules</title>
-	<meta charset="utf-8">
+	<title>AskBank Sistemas</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style>
 		body{
 			font: normal 18pt Arial;
+			background-color: rgb(42, 2, 80);
+			color: darkgray;
+
 		}
 		input{
 			font: normal 18pt Arial;
-			width: 100px
+			width: 100px;
 		}
 	</style>
 </head>
@@ -19,11 +24,19 @@
 	<u1>
 		<li>- Escolha uma opção no Menu</li>
 	</u1>
-	<!-- <script type="module" src="https:/./js/main.js"></script> -->
 	<script>
-		function dobro(numero){
-			return n * 2;
-		}
+		//type="module" src="./ProjetoP1_Rascunho.js";
+	let botao = window.confirm('Deseja adicionar uma questão?')
+	if (botao == true){
+		disciplina = window.prompt('Escolha a disciplina')
+		window.alert('Disciplina ' + disciplina + ' adicionada.')
+		//console.log(disciplina)
+	} else {window.alert('Cancelado')}
+	function media(numero){
+		return n * 2;
+	}
+	numero = Number.parseInt(2) + Number.parseFloat(5.5)
+	window.alert('${numero}')
 	</script>
 </body>
 </html>
