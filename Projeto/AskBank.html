@@ -49,9 +49,12 @@
 		// Adicionado do arquivo .js
 		// CADASTRO DE QUESTÕES
 		listaQuestoes = [
-			{disciplina: "Matematica", professor: "Simeao", serie: "3", assunto: "Geometria Espacial", dificuldade: "1", enunciado: "Qual é o volume de um cubo de aresta 2?", alternativa: [1,8,12,5,7,14,22,50,21,100], resposta: ["F","V","F","F","F","F","F","F","F","F"]},
-			{disciplina: "Matematica", professor: "Tammyris", serie: "1", assunto: "Geometria Plana", dificuldade: "1", enunciado: "Qual a área de um quadrado de lado 2?", alternativa: [1,4,12], resposta: ["F","V","F"]},
-			{disciplina: "Historia", professor: "Joana", serie: "1", assunto: "Historia do Brasil", dificuldade: "1", enunciado: "Quem descobriu o Brasil", alternativa: ["Fausto Silva","Fernando Henrique Cardoso","Pedro Álvares Cabral", "Tammyris Carvalho", "Marcos Vinícius"], resposta: ["F","F","V","F","F"]}
+			{disciplina: "Matemática", professor: "Simeão", série: "1", assunto: "Geometria Espacial", dificuldade: "1", enunciado: "Qual é o volume de um cubo de aresta 2?", alternativa: [1,8,12,5,7,14,22,50,21,100], resposta: ["F","V","F","F","F","F","F","F","F","F"]},
+			{disciplina: "Matemática", professor: "Tammyris", série: "1", assunto: "Geometria Plana", dificuldade: "1", enunciado: "Qual a área de um quadrado de lado 2?", alternativa: [1,4,12], resposta: ["F","V","F"]},
+			{disciplina: "História", professor: "Joana", série: "1", assunto: "História do Brasil", dificuldade: "1", enunciado: "Quem descobriu o Brasil", alternativa: ["Fausto Silva","Fernando Henrique Cardoso","Pedro Álvares Cabral", "Tammyris Carvalho", "Marcos Vinícius"], resposta: ["F","F","V","F","F"]},
+			{disciplina: "História", professor: "Aristides", série: "1", assunto: "História do Brasil", dificuldade: "1", enunciado: "Quais dos seguintes imperadores governaram o Brasil?", alternativa: ["Dom João VI","Dom Francisco Brasileiro","Dom Pedro II", "Rei Leônidas", "Ulisses de Morais"], resposta: ["V","F","V","F","F"]},
+			{disciplina: "Inglês", professor: "Smith", série: "1", assunto: "To be present", dificuldade: "1", enunciado: "It ___ raining outside, but the kids ___ playing there, while i ___ here inside", alternativa: ["is - is - are","is - are - are","is - are - am", "am - are - is", "are - are - am"], resposta: ["F","V","F","F","F"],
+			{disciplina: "Inglês", professor: "Smith", série: "1", assunto: "Auxiliar verbs", dificuldade: "1", enunciado: "My name ___ Johnathan, and i ___ two siblings, my sister's name ___ Ana and my brother's name ___ Nicholas", alternativa: ["is - have - is - is","are - were - is - are","am - will - is", "am - are - is - am", "are - are - am - is"], resposta: ["V","F","F","F","F"]
 		]
 
 		//-------------------------------------------------------------------------------------------------------
@@ -61,7 +64,7 @@
 		var nomeDisciplina = input("Digite o nome da disciplina da prova: ");
 
 		// // Especificação das características da questão
-		var serieDisciplina = input("Digite a série: ");
+		var sérieDisciplina = input("Digite a série: ");
 		var assuntoDisciplina = input("Digite o assunto: ");
 		var dificuldadeDisciplina = input("Digite a dificuldade da questão: ");
 		var quantidadeAlternativas = input("Digite o número de opções na questão: ");
@@ -70,8 +73,8 @@
 		var questoesElegiveis = [];
 		j=0;
 
-		for (i=0; i<=2; i++) {
-			if ((listaQuestoes[i].disciplina == nomeDisciplina) && (listaQuestoes[i].serie == serieDisciplina) &&
+		for (var i = 0; i <= 2; i++) {
+			if ((listaQuestoes[i].disciplina == nomeDisciplina) && (listaQuestoes[i].série == sérieDisciplina) &&
 			(listaQuestoes[i].assunto == assuntoDisciplina) && (listaQuestoes[i].dificuldade == dificuldadeDisciplina)) {
 				questoesElegiveis[j]=listaQuestoes[i];
 				j++;
@@ -87,10 +90,10 @@
 		// Sorteio das alternativas para a questão sorteada
 
 		// questaoProva = questaoSorteada.alternativa
-		var listaPosicoes =[];
+		var listaPosicoes = [];
 
 		qtdAlternativas = questaoSorteada.alternativa.length;
-		for (i=0; i<quantidadeAlternativas; i++){
+		for (var i = 0; i < quantidadeAlternativas; i++){
 			posOpcao = Math.floor(Math.random() * qtdAlternativas);
 			listaPosicoes[i] = posOpcao;
 		}
@@ -110,7 +113,7 @@
 		}
 
 		questaoProva.enunciado = questaoSorteada.enunciado;
-		for (k=0; k<listaPosicoes.length; k++){
+		for (var k = 0; k < listaPosicoes.length; k++){
 			questaoProva.alternativa[k] = questaoSorteada.alternativa[listaPosicoes[k]];
 			gabaritoQuestaoProva.gabarito[k] = questaoSorteada.resposta[listaPosicoes[k]]
 		}
@@ -123,7 +126,7 @@
 			resposta: []
 		}
 
-		for(k=0; k<listaPosicoes.length;k++){
+		for(var k = 0; k < listaPosicoes.length;k++){
 			respostaProva.resposta[k] = input("Digite a resposta: ")
 			if (respostaProva.resposta[k] == gabaritoQuestaoProva.gabarito[k]){
 				console.log("Correto")
