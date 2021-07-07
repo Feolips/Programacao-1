@@ -1,3 +1,5 @@
+Alunos: Felipe Souza Vieira e Tammyris Emanuella Alves Carvalho
+
 input = require("prompt-sync")();
 console.clear(); // Método para limpar a tela
 
